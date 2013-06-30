@@ -1,0 +1,99 @@
+body {
+  font-family: sans-serif;
+  padding: 20px 0 0 30px;
+  background-color: #3C3F40;
+  background-color: #A8B5AB;
+}
+h2 {
+  color: #0F1820;
+}
+.red {
+  color: red;
+}
+figure {
+  padding: 0;
+  margin: 0;
+}
+.symbol {
+  font-size: 4em;
+  margin: 5px 0 0 18px;
+}
+.hit-button, .stand-button {
+  width: 80px;
+  margin-right: 20px;
+  background-color: #D4B392;
+  border: solid 1px black;
+  box-shadow: 2px 2px 5px grey;
+  cursor: pointer;
+}
+#card {
+  float: left;
+/*  border: solid 1px black;*/
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  /*margin-right: 20px;*/
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 2s;
+}
+
+.hand {
+  width: 100%;
+  float: left;
+}
+
+.container {
+  width: 100px;
+  height: 140px;
+  position: relative;
+  float: left;
+  margin: 20px;
+  -webkit-perspective: 800px;
+}
+
+#card figure {
+  border: solid 1px black;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+}
+
+.covered {
+  background-color: black;
+}
+
+#card.flipped {
+  -webkit-transform: rotateY( 180deg );
+}
+
+#card .front {
+  background: #F2F2F2;
+  background: #EBDDD0;
+}
+
+#card .back {
+  /*background: blue;*/
+  -webkit-transform: rotateY( 180deg );
+  background-color: #026873;
+  background-image: linear-gradient(90deg, rgba(255,255,255,.07) 50%, transparent 50%),
+                    linear-gradient(90deg, rgba(255,255,255,.13) 50%, transparent 50%),
+                    linear-gradient(90deg, transparent 50%, rgba(255,255,255,.17) 50%),
+                    linear-gradient(90deg, transparent 50%, rgba(255,255,255,.19) 50%);
+  background-size: 13px, 29px, 37px, 53px;
+}
+
+.notice {
+  color: white;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  background-color: #ddcc00;
+  background-color: #A4744E;
+  padding: 5px;
+  border: solid 1px black;
+  border-radius: 6px;
+  margin: 20px;
+}
